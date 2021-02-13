@@ -1,0 +1,21 @@
+<header>
+  <button class="button-back" mat-button color="warn" routerLink="/">Back</button>
+  <mat-form-field class="input-search">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Ex. Album" [(ngModel)]="search">
+  </mat-form-field>
+  <mat-icon class="favorites" [matBadge]="badgeCount" matBadgeColor="warn">favorite icon</mat-icon>
+</header>
+
+<div class="albums-wrapper">
+  <div class="album" *ngFor = "let album of (albums | filter:search)">
+    <img [src] = "album.image[2]['#text']">
+    <div class="hover-album">
+      <h3 class="title">{{album.name}}</h3>
+      <p class="description">{{album.artist.name}}</p>
+      <button mat-icon-button color="warn">
+        <mat-icon (click)="openSnackBar(album); album.favorite = !album.favorite">{{album.favorite ? 'favorite' : 'favorite_outline'}}</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+:host {
+  width: 100%;
+  height: 100%;
+  background: grey;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.name {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+}
+
+.name:active {
+  outline: none;
+}
+
+.genre {
+  display: flex;
+  flex: 0 1 30%;
+  height: 200px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.genre:hover > .name {
+  font-size: 25px;
+  transition: 0.2s ease-in-out;
+}
+
+.genre:active {
+  outline: none;
+}
+
+.genre:nth-child(1) {
+  background: rgb(233, 69, 69);
+}
+
+.genre:nth-child(2) {
+  background: rgb(156, 238, 238);
+}
+
+.genre:nth-child(3) {
+  background: rgb(221, 181, 108);
+}
+
+.genre:nth-child(4) {
+  background: rgb(168, 217, 248);
+}
+
+.genre:nth-child(5) {
+  background: rgb(231, 146, 231);
+}
+
+.genre:nth-child(6) {
+  background: rgb(119, 119, 194);
+}
